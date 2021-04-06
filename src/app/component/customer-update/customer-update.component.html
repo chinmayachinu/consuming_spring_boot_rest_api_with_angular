@@ -1,0 +1,31 @@
+<form [formGroup]="updateCustomerForm" (ngSubmit)="updateCustomer()">
+    <div>
+        CustomerName :
+        <input type="text" formControlName="customerName" [attr.placeholder]="customer.customerName" >
+    </div>
+    <div >
+        CompanyName :
+        <input type="text" formControlName="companyName" [attr.placeholder]="customer.companyName">
+    </div>
+    <div>
+        UserId :
+        <input type="number" formControlName="userId" [attr.placeholder]="customer.userId" [attr.readonly]="true">
+    </div>
+    <div>
+        CustomerDatabaseId :
+        <input type="number" formControlName="customerDatabaseId" [attr.placeholder]="customer.customerDatabaseId">
+    </div>
+    <div >
+        DistrictId :
+        <input type="number" formControlName="districtId" [attr.placeholder]="customer.districtId">
+    </div>
+    <div >
+        CreateDate :
+        <input type="text" formControlName="createDate" [attr.placeholder]="customer.createDate">
+    </div>
+    <div >
+        TransactionDate :
+        <input type="text" formControlName="transactionDate" [attr.placeholder]="customer.transactionDate">
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>

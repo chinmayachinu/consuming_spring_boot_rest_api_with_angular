@@ -1,0 +1,30 @@
+<form [formGroup]="addCustomerForm" (ngSubmit)="addCustomer()">
+    <div>
+        CustomerName :<input type="text" formControlName="customerName">
+    </div>
+    <div >
+        CompanyName :
+        <input type="text" formControlName="companyName">
+    </div>
+    <div>
+        UserId :
+        <input type="number" formControlName="userId">
+    </div>
+    <div>
+        CustomerDatabaseId :
+        <input type="number" formControlName="customerDatabaseId">
+    </div>
+    <div >
+        DistrictId :
+        <input type="number" formControlName="districtId">
+    </div>
+    <div >
+        CreateDate :
+        <input type="text" formControlName="createDate">
+    </div>
+    <div >
+        TransactionDate :
+        <input type="text" formControlName="transactionDate">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

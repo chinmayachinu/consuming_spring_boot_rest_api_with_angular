@@ -1,0 +1,29 @@
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">CustomerName</th>
+            <th scope="col">CompanyName</th>
+            <th scope="col">UserId</th>
+            <th scope="col">CustomerDatabaseId</th>
+            <th scope="col">DistrictId</th>
+            <th scope="col">CreateDate</th>
+            <th scope="col">TransactionDate</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of customerList | async">
+            <td>{{customer.customerName}}</td>
+            <td>{{customer.companyName}}</td>
+            <td>{{customer.userId}}</td>
+            <td>{{customer.customerDatabaseId}}</td>
+            <td>{{customer.districtId}}</td>
+            <td>{{customer.createDate}}</td>
+            <td>{{customer.transactionDate}}</td>
+            <td >
+                <button class="btn btn-primary" (click)="updateCustomer(customer.userId)">Update</button>
+                <button class="btn btn-danger" (click)="deleteCustomer(customer.userId)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
